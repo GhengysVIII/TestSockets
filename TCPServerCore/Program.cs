@@ -20,6 +20,9 @@ namespace TCPServerCore
             string line;
             string[] parts;
             Console.WriteLine("Initialize Console Thread...");
+            while (true)
+            {
+            }
         }
     }
 }
