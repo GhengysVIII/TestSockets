@@ -17,7 +17,6 @@ namespace TCPClie
 
             asyncBuffer = new Byte[playerSocket.ReceiveBufferSize + playerSocket.SendBufferSize];
             playerSocket.BeginConnect("127.0.0.1", 5555, new AsyncCallback(ConnectCallback), playerSocket);
-
         }
 
         private void ConnectCallback(IAsyncResult result)
@@ -32,11 +31,8 @@ namespace TCPClie
                 }
                 else
                 {
-
                     Console.WriteLine("Succesfully connected to the server!");
                 }
-                    
-
             }
             catch (Exception)
             {

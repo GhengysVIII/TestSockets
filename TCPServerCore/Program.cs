@@ -3,11 +3,12 @@ using System.Threading;
 
 namespace TCPServerCore
 {
-    class Program
+    internal class Program
     {
         private static Thread threadConsole;
         private static General general = new General();
-        static void Main(string[] args)
+
+        private static void Main(string[] args)
         {
             threadConsole = new Thread(new ThreadStart(ConsoleThread));
             threadConsole.Start();
@@ -19,11 +20,6 @@ namespace TCPServerCore
             string line;
             string[] parts;
             Console.WriteLine("Initialize Console Thread...");
-            while (true)
-            {
-
-            }
         }
     }
-
 }
